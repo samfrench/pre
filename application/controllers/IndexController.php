@@ -18,9 +18,9 @@ class IndexController extends Zend_Controller_Action
     	echo 'pre';
     }
 
-    public function mostReadAction()
+    public function readAction()
     {
-
+        $this->view->mostRead = $this->_helper->scrape('popular/read', '.c-open');
     }
 
     public function newsAction()

@@ -1,0 +1,18 @@
+<?= $this->storyBody; ?>
+<script type="text/javascript">
+(function () {
+	var id = window.location.pathname.split('-').pop();
+	$.get('/data/story?id=' + id, function(data) {
+  		if(typeof(Storage)!=="undefined") {
+  			var concepts = jQuery.parseJSON(data);
+  			for (var i = 0; i < concepts.length; i++) {
+  				if (localStorage.getItem(concepts[i]) === null) {
+  					localStorage.setItem(concepts[i], 1);
+  				} else {
+  					localStorage.setItem(concepts[i], parseInt(localStorage.getItem(concepts[i])) + 1);
+  				}
+  			}
+  		}
+	});
+})();
+</script>

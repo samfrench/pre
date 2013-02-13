@@ -10,7 +10,12 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        $this->view->mainContent = $this->_helper->scrape(null, '#index-panels');
+    }
+
+    public function preAction()
+    {
+    	echo 'pre';
     }
 
     public function mostReadAction()
@@ -20,7 +25,20 @@ class IndexController extends Zend_Controller_Action
 
     public function newsAction()
     {
-    	
+        
+    }
+
+    public function storyAction()
+    {
+        if ($this->getRequest()->getParam('story') === 'pre') {
+            $this->_forward('pre');
+        } elseif ($this->getRequest()->getParam('story') === 'article') {
+            $this->_forward('index');
+        } else {
+            $this->view->storyId = $this->getRequest()->getParam('story');
+
+            $this->view->storyBody = $this->_helper->scrape($this->view->storyId, '#page');
+        }
     }
 
 

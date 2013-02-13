@@ -3,7 +3,7 @@
 (function () {
 	var id = window.location.pathname.split('-').pop();
 	$.get('/data/story?id=' + id, function(data) {
-  		if(typeof(Storage)!=="undefined") {
+  		if(typeof(Storage)!=="undefined" && data) {
   			var concepts = jQuery.parseJSON(data);
   			for (var i = 0; i < concepts.length; i++) {
   				if (localStorage.getItem(concepts[i]) === null) {

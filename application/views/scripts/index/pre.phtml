@@ -2,11 +2,371 @@
 <script type="text/javascript">
 (function () {
 	if(typeof(Storage)!=="undefined") {
-		//var items;
+		var items;
     for (var key in localStorage){
-      console.log(key);
+    	items += key + ' - ' + localStorage.getItem(key) + '<br />';
     }
-    //$('#stories').html(key);
+    $('#stories').html(items);
 	}
 })();
 </script>
+
+
+
+<div id="index-panels" class="panels" />
+<div class="panel panel-1 open" role="main">
+   <div class="container c-open">
+      <div class="push">
+         <div id="top-stories" class="top-stories group">
+            <div class="group__header">
+               <h2 class="group__title">Top Stories</h2>
+            </div>
+            <div class="group__body">
+               <div class="units-list units-list--separators">
+                  <div class="unit unit--lead unit--has-media">
+                     <a href="/news/world-21453370" class="unit__link-wrapper">
+                        <div class="unit__header">
+                           <h3 class="unit__title">       <span class="cta"> EU urges DNA tests of processed beef </span> </h3>
+                           <div class="unit__meta">
+                              <div class="date" data-seconds="1360794445" data-datetime="13 February 2013">13 February 2013</div>
+                           </div>
+                        </div>
+                        <div class="unit__media"> <img src="http://ichef.bbci.co.uk/news/200/media/images/65876000/jpg/_65876042_65876041.jpg" class="image-replace" alt="" width="768" height="432" /></div>
+                        <div class="unit__body">
+                           <div class="unit__summary">
+                              <p class="summary">The EU urges members to conduct random DNA tests on processed beef for three months, to tackle a widening scandal over mislabelled horsemeat.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/business-21440080" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65739000/jpg/_65739377_65568934.jpg" data-width="464" data-height="261"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Bank warns inflation 'to stay high' </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360772945" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">UK inflation will remain above the Bank of England's target for the next two years, but a recovery is in sight, the Bank's governor says.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/uk-21447797" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65872000/jpg/_65872662_017218275.jpg" data-width="768" data-height="432"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Kate bikini photos 'not scandalous' </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360774556" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">Italian magazine Chi defends using photos of the pregnant Duchess of Cambridge on holiday, saying they are "photos of a young couple in love".</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/health-21442519" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/63070000/jpg/_63070187_coronavirusspl.jpg" data-width="464" data-height="261"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Sars-like virus 'spreads in people' </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360761795" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">Health officials in the UK believe they have the strongest evidence yet that a new respiratory illness similar to the deadly Sars virus can spread from person to person.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/world-europe-21451090" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65874000/jpg/_65874427_65874426.jpg" data-width="768" data-height="432"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Pope Benedict holds last public Mass </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360780230" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">Pope Benedict XVI celebrates his last scheduled public Mass, for Ash Wednesday, two days after shocking Catholics by saying he would resign.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/uk-england-21449410" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65874000/jpg/_65874115_65874114.jpg" data-width="578" data-height="325"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Cregan witness got 'one-eyed threat' </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360785022" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">A woman tells the trial of Dale Cregan she was told if she spoke to police the "one-eyed Scotchman" would kill her.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/business-21439945" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65867000/jpg/_65867094_grzwgc2g.jpg" data-width="768" data-height="432"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> EU and US launch free-trade talks </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360790183" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">The European Union and the US will begin formal talks on a free-trade agreement, paving the way for the biggest trade deal in history.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/business-21442301" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65865000/jpg/_65865427_65865426.jpg" data-width="768" data-height="432"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Republic chain enters administration </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360776685" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">Leeds-based fashion chain Republic, which employs 2,500 staff, confirms that it has become the latest High Street name to go into administration.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/uk-england-derbyshire-21442115" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65861000/jpg/_65861846_65861845.jpg" data-width="768" data-height="432"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Blaze-accused father 'hit mistress' </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360774353" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">A father accused of starting a house fire which killed six of his children was violent towards his live-in mistress, a court hears.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="/news/world-21451432" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65878000/jpg/_65878078_65878077.jpg" data-width="768" data-height="432"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Five killed in Ukraine plane crash </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360795777" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">At least five people were killed when a plane with football supporters attempted an emergency landing and caught fire in the eastern Ukrainian city of Donetsk.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="sport-stories" class="group">
+            <div class="group__header">
+               <h2 class="group__title"> <a href="http://www.bbc.co.uk/sport/0/mobile/" class="has-right-arrow"><span class="cta">Sport</span></a> </h2>
+            </div>
+            <div class="group__body">
+               <div class="units-list units-list--separators">
+                  <div class="unit unit--regular unit--has-media">
+                     <a href="http://www.bbc.co.uk/sport/0/mobile/football/21348206" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65878000/jpg/_65878668_65878372.jpg" data-width="464" data-height="261"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Real Madrid 1-1 Man Utd </span> </h3>
+                              <div class="unit__meta">
+                                 <div class="date" data-seconds="1360793149" data-datetime="13 February 2013">13 February 2013</div>
+                              </div>
+                           </div>
+                           <div class="unit__summary">
+                              <p class="summary">Danny Welbeck's away goal earns Manchester United a draw against Real Madrid in the Champions League.</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="module-local-weather" class="group">
+            <div class="group__header">
+               <h2 class="group__title local-weather-location">
+                  <a href="http://m.bbc.co.uk/weather/" class="local-weather-location-action has-right-arrow"><span class="cta local-weather-location-label">Weather</span></a>
+               </h2>
+            </div>
+            <div class="group__body">
+               <div class="locator"></div>
+               <div class="units-list units-list--separators hidden locator-stories-placeholder"></div>
+               <a href="http://m.bbc.co.uk/weather/" class="module-weather"></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container c-solid">
+      <div class="inner push">
+         <div class="group features-and-analysis">
+            <div class="group__header">
+               <h2 class="group__title">Features &amp; Analysis</h2>
+            </div>
+            <div class="group__body">
+               <div class="units-list units-list--columning">
+                  <div class="unit unit--feature unit--has-media">
+                     <a href="/news/magazine-21391388" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65858000/jpg/_65858651_160888855.jpg" data-width="2048" data-height="1152"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Going rogue </span> </h3>
+                              <div class="unit__summary">
+                                 <p class="summary">What makes an officer of the law turn criminal?</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--feature unit--has-media">
+                     <a href="/news/magazine-21186182" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65849000/jpg/_65849756_lebanese_bar2009.jpg" data-width="464" data-height="261"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Young, free... and careful </span> </h3>
+                              <div class="unit__summary">
+                                 <p class="summary">How women around the world stay safe on a night out</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--feature unit--has-media">
+                     <a href="/news/uk-21449140" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65874000/jpg/_65874755_134831508.jpg" data-width="2048" data-height="1152"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Good for business? </span> </h3>
+                              <div class="unit__summary">
+                                 <p class="summary">Will horsemeat scandal boost traditional butchers?</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--feature unit--has-media">
+                     <a href="/news/world-middle-east-21424563" class="unit__link-wrapper">
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Grief and bitterness  </span> </h3>
+                              <div class="unit__summary">
+                                 <p class="summary">Survivors haunted by Syria&acirc;&#128;&#153;s devastating siege of Homs</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--feature unit--has-media">
+                     <a href="/news/world-europe-21446388" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65855000/jpg/_65855779_65855778.jpg" data-width="464" data-height="261"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> Job or vow? </span> </h3>
+                              <div class="unit__summary">
+                                 <p class="summary">Has papacy lost some of its aura, asks Robert Pigott</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--feature unit--has-media">
+                     <a href="/news/business-21446333" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/63779000/jpg/_63779352_0m0bmhmb.jpg" data-width="768" data-height="432"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> No regrets </span> </h3>
+                              <div class="unit__summary">
+                                 <p class="summary">Inflation is going to stay high, says Stephanie Flanders</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="unit unit--feature unit--has-media">
+                     <a href="/news/magazine-21425112" class="unit__link-wrapper">
+                        <div class="unit__media">
+                           <div class="delayed-image-load" data-src="http://ichef.bbci.co.uk/news/200/media/images/65844000/jpg/_65844499_benedict-lead-image.jpg" data-width="624" data-height="351"></div>
+                        </div>
+                        <div class="unit__body">
+                           <div class="unit__header">
+                              <h3 class="unit__title">       <span class="cta"> I'm not Ben! </span> </h3>
+                              <div class="unit__summary">
+                                 <p class="summary">The benefits and burdens of being called Benedict</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="panel panel-2">
+   <div id="container-1" class="container c-open">
+      <div id="most-popular-placeholder"></div>
+   </div>
+</div>
+
+
+
+</div>

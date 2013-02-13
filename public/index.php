@@ -30,10 +30,5 @@ $application = new Zend_Application(
     APPLICATION_PATH . '/configs/application.ini'
 );
 
-try {
 $application->bootstrap()
             ->run();
-        } catch (Exception $e) {
-            var_dump($e);
-            exit;
-        }

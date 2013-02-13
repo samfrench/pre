@@ -17,12 +17,16 @@ class DataController extends Zend_Controller_Action
 
     public function conceptsAction()
     {
-        $sourceUrl = 'http://juicer.responsivenews.co.uk/articles/18608410.json';
+        $sourceUrl = 'http://juicer.responsivenews.co.uk/articles/' . $this->getParam('id') . '.json';
         $client = new Zend_Http_Client($sourceUrl); 
         $response = $client->request();
         $json = json_decode($response->getBody());
 
         $concepts = array();
+
+        if (!isset($json->article)) {
+            return json_encode('');
+        }
 
         if ($json->article && $json->article->places) {
             foreach ($json->article->places as $place) {

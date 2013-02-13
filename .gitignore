@@ -1,0 +1,13 @@
+syntax: glob
+
+# ignore files in specified folders
+.externalToolBuilders
+.project
+.settings
+.buildpath
+.zfproject.xml
+application/modules/default/models/Proxies/*.php
+tests/log/*
+public/docs/*
+public/js/node_modules
+public/js/node_modules/*

@@ -15,7 +15,7 @@ class IndexController extends Zend_Controller_Action
 
     public function preAction()
     {
-    	echo 'pre';
+    	
     }
 
     public function readAction()
@@ -30,7 +30,7 @@ class IndexController extends Zend_Controller_Action
 
     public function storyAction()
     {
-        if ($this->getRequest()->getParam('story') === 'pre') {
+        if ($this->getRequest()->getParam('story') === 'for-you') {
             $this->_forward('pre');
         } elseif ($this->getRequest()->getParam('story') === 'article') {
             $this->_forward('index');

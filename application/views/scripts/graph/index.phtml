@@ -1,0 +1,69 @@
+<div id="chart_div"></div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(getFromStorage);
+
+	function drawChart(data) {
+		var options = {
+		width: 600,
+		height: 608,
+		chartArea: {width: 400},
+		bar: {groupWidth: '90%'},
+		series: [{color: '#990000', visibleInLegend: false}],
+		vAxis: {title: 'Concept',  titleTextStyle: {color: 'black'}},
+		hAxis: {minValue: 0}
+	};
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+    google.visualization.events.addListener(chart, 'ready', myReadyHandler);
+	chart.draw(data, options);
+    
+      }
+      
+function myReadyHandler() {
+    setTimeout(getFromStorage, 1000);
+}
+
+function right(str, n){
+if (n <= 0)
+   return "";
+else if (n > String(str).length)
+   return str;
+else {
+   var iLen = String(str).length;
+   return String(str).substring(iLen, iLen - n);
+}
+}
+
+function getFromStorage() {
+    
+var data = new google.visualization.DataTable();
+// Add columns
+data.addColumn('string', 'Concept');
+data.addColumn('number', 'Score');
+
+    
+for (i=0; i<=localStorage.length-1; i++) {
+	key = localStorage.key(i);
+		val = parseInt(localStorage.getItem(key));
+		if (key.length > 28) {
+			key = right(key,key.length - 28);
+		}
+
+		data.addRows([
+			[key, val]
+		]);
+}
+
+data.sort([{column: 1}, {column: 0}]);
+if (data.getNumberOfRows() > 10) {
+   data.removeRows(0,data.getNumberOfRows()-10);
+}
+data.sort([{column: 0}]);    
+    drawChart(data);
+}
+    
+</script>
